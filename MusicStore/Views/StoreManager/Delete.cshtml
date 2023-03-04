@@ -1,0 +1,63 @@
+﻿@model MusicStore.Models.Album
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/sajat.css" rel="stylesheet" />
+<div class="container" style="color:white;font-weight:bold;text-align:center;">
+    <h3 style="color:white;font-weight:bold;">Biztos törölni szeretné?</h3>
+    <h4 style="color:white;font-weight:bold;">Album</h4>
+    <hr class="featurette-divider -hr_mine">
+    <dl class="dl-horizontal" style="color:white;font-weight:bold;">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artist.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Artist.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genre.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AlbumArtUrl)
+        </dd>
+        <br />
+        <dd>
+        
+            @using (Html.BeginForm())
+            {
+                //删除Delete后面的id在哪儿加入进去的呢
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Törlés" class="sajatgomb" />
+
+                </div>
+            }
+      
+         </dd>
+        <br />
+        <dd> @Html.ActionLink("Vissza a listához", "Index")</dd>
+    </dl>
+  
+    <hr class="featurette-divider -hr_mine">
+</div>

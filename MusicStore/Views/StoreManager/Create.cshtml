@@ -1,0 +1,90 @@
+﻿@model MusicStore.Models.Album
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/sajat.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4 style="color:white;font-weight:bold;" >Autó felvétel</h4>
+        <hr class="featurette-divider -hr_mine">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.GenreId, "Típus", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.DropDownList("GenreId", String.Empty)
+                @*显示错误标记*@
+                @Html.ValidationMessageFor(model => model.GenreId)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ArtistId, "Gyártó", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArtistId", String.Empty)
+                @Html.ValidationMessageFor(model => model.ArtistId)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, "Autó neve", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, "Ár", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price)
+                @Html.ValidationMessageFor(model => model.Price)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.AlbumArtUrl, "Borító kép", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AlbumArtUrl)
+                @Html.ValidationMessageFor(model => model.AlbumArtUrl)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Front, "Kép előlről", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Front)
+                @Html.ValidationMessageFor(model => model.Front)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Back, "Kép hátulról", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Back)
+                @Html.ValidationMessageFor(model => model.Back)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Interior, "Kép belülről", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Interior)
+                @Html.ValidationMessageFor(model => model.Interior)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Engine, "Kép motorról", new { @class = "control-label col-md-2 feher" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Engine)
+                @Html.ValidationMessageFor(model => model.Engine)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Hozzáadás" class="sajatgomb" />
+            </div>
+        </div>
+    </div>
+    <div>
+        @Html.ActionLink("Vissza a listához", "Index")
+    </div>
+}
+
+<hr class="featurette-divider -hr_mine">

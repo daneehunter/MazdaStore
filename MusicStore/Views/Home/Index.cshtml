@@ -1,0 +1,149 @@
+﻿<div>
+    <div>
+        @model IEnumerable<MusicStore.Models.Album>
+        @{
+            //加载布局页面
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            ViewBag.Title = "Index";
+        }
+        @Scripts.Render("~/bundles/bootstrap")
+        <link href="~/sajat.css" rel="stylesheet" />
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>-->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <center>
+                            <img src="~/Content/Images/Mazda.png" alt="Mazda" opacity:70%;">
+                            <center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="~/Content/Images/Mazda2.png" alt="Mazda" opacity:70%">
+                        </center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="~/Content/Images/Mazda3.png" alt="Mazda" opacity:70%">
+                            <center>
+                    </div>
+                    <div class="item">
+                        <center>
+                            <img src="~/Content/Images/Mazda4.png" alt="Mazda" opacity:70%">
+                            <center>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <!--    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>-->
+        </div>
+
+        <div class="container" style="color:white;">
+            <hr class="featurette-divider -hr_mine">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <center>
+                            <div class="-div_animation">  <img src="~/Content/Images/autoszin.png"></div>
+                        </center>
+                        <h2 style="text-align:center; color:white;">Szín választék</h2>
+                        <p style="text-align: justify" class="text-white">
+                            Válassza ki saját ízlésének megfelelően a tökéletes színt a tökéletes autójához. Hatalmas szín választékunkban biztosan megtalálja amit keres.<br /> 
+                            A legkedveltebb színek a vásárlók választásai alapján:<br />
+                            - Arctic Fehér<br />
+                            - Soul Crystal Piros<br />
+                            - Machine Gray Szürke<br />
+                            - Polymetal Gray Szürke<br />
+                            - Jet Fekete<br />
+                            - Deep Crystal Kék<br />
+                            - Sonic Ezüst<br />
+                            - Snowflake Fehér<br />
+                        </p></br>
+
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-6">
+                        <center>
+                            <div class="-div_animation">
+                                <img src="~/Content/Images/Transparent motor.png">
+                            </div>
+                            <h2 style="text-align:center; color:white;">SKYACTIV-X</h2>
+                            <p style="text-align: justify;" class="text-white">
+                                <h3 style="color:white;">VILÁGELSŐ ÚJDONSÁG A KERESKEDELMI MOTORTECHNOLÓGIÁBAN</h3>
+                                A Mazda mérnökei olyan eredményeket értek el, amelyeket senki más nem tudott. Olyan benzinmotort hoztak létre, amely a dízelmotorhoz hasonlóan égeti el az üzemanyagot. A speciális, szikravezérelt kompressziós gyújtású (SPCCI) technológiának segítségével a Skyactiv-X motor kevesebb üzemanyagot éget el, mint egy hagyományos benzinmotor, kisebb a károsanyag-kibocsátása is, de jelentősen nagyobb teljesítményt ad le.
+                            </p></br>
+                        </center>
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div>
+            <!-- 2 -->
+            <hr class="featurette-divider -hr_mine">
+            <div class="row featurette">
+                <div class="col-md-7" id="p1" data-aos="fade-right">
+                    <h1 class="featurette-heading display-4 -textshadow_mine"><i class="fas fa-car" style="color:#fa7c03;"></i> Dani És Niko Mazda Boltja</h1>
+                    <p>
+                        <ul>
+                            <li>Cégünk neve: Official partner with Mazda</li>
+                            <li>Telephelyünk: 8000, Székesfehérvár Budai út 6</li>
+                            <li>Telefonszámunk: 06701234567 vagy 06308901234</li>
+                            <li>E-mail címünk: DaniNiko@mazda.com</li>
+                            <li>Fax: (1) 251 1992</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-md-5" data-aos="fade-left">
+                    <img src="~/Content/Images/server_logo.png">
+                </div>
+            </div>
+            <hr class="featurette-divider -hr_mine">
+            <div class="row featurette">
+                <div class="col-lg-12">
+                    <center>
+                        <h1 class="display-4 -contact_mine -textshadow_mine">Kapcsolat</h1>
+                        <hr class="-line_mine_orange">
+                        </br>
+
+                        <div class="row">
+                            <div class="col-sm-4" data-aos="fade-right">
+                                <a href="#" class="-contact_mine_a"> <i class="fas fa-envelope -contact_mine_icons"></i></a>
+                                <p class="-contact_mine_text">DaniNiko@mazda.com</p>
+                            </div>
+                            <div class="col-sm-4" data-aos="fade-up">
+                                <a href="" class="-contact_mine_a">
+                                    <i class="fab fa-instagram -contact_mine_icons"></i>
+                                </a>
+                                <p class="-contact_mine_text">#Mazda</p>
+                            </div>
+                            <div class="col-sm-4" data-aos="fade-left">
+                                <a href="" class="-contact_mine_a">
+                                    <i class="fab fa-facebook-square -contact_mine_icons"></i>
+                                </a>
+                                <p class="-contact_mine_text">Hivatalos Mazda Oldal</p>
+                            </div>
+                        </div>
+                        </br>
+                        </br>
+                        <a href="/Store/">
+                            <button type="button" class="sajatgomb">Nézz be hozzánk</button>
+                            <a>
+                    </center>
+                </div>
+
+            </div>
+        </div>
+        <hr class="divider -hr_mine">
+    </div>
+</div>

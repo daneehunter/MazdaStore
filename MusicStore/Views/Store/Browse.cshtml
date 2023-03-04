@@ -1,0 +1,37 @@
+﻿@model MusicStore.Models.Genre
+@{
+    ViewBag.Title = "Browse Albums";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="genre">
+        <center>
+            <h1 class="sajath" style="color:white;">
+                <em>@Model.Name</em>&nbsp;&nbsp;Típus
+            </h1>
+        </center>
+        @foreach (var album in Model.Albums)
+        {
+
+            <div class="col-lg-6">
+
+                <div class="card" style="width: 18rem;">
+                    <a href="@Url.Action("Details",new { id = album.AlbumId })">
+                        <img alt="@album.Title" src="@album.AlbumArtUrl" />
+                    </a>
+
+                    <div class="card-body">
+
+                        <a href="@Url.Action("Details",new { id = album.AlbumId })" class="btn btn-warning" style="width:500px;">@album.Title</a>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>

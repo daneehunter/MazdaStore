@@ -1,0 +1,89 @@
+﻿<div>
+    @model MusicStore.Models.Album
+    @{
+        ViewBag.Title = "Details";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <link href="~/sajat.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+
+    <!-- <p>
+            <img alt="@Model.Title" src="@Model.Front" />
+        </p>
+        <p>
+            <img alt="@Model.Title" src="@Model.Back" />
+        </p>
+        <p>
+            <img alt="@Model.Title" src="@Model.Interior" />
+        </p>
+        <p>
+            <img alt="@Model.Title" src="@Model.Engine" />
+        </p>
+
+    </div>
+    <div id="album-details">
+        <p>
+            <em>Genre:</em>@Model.Genre.Name
+        </p>
+        <p>
+            <em>Artist:</em> @Model.Artist.Name
+        </p>
+        <p>
+            <em>Price: $</em> @String.Format("{0:F}", Model.Price)
+        </p>
+        <p class="button">
+            @Html.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { id = Model.AlbumId }, "")
+        </p>
+    </div>-->
+    <div class="container">
+        <h1 class="sajath" style="color:white;">@Model.Title</h1>
+        <hr class="featurette-divider -hr_mine">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <center>
+                        <img style="border-radius:40px;" alt="@Model.Title" src="@Model.Front" />
+                        <center>
+                </div>
+                <div class="item">
+                    <center>
+                        <img style="border-radius:40px;" alt="@Model.Title" src="@Model.Back" />
+                    </center>
+                </div>
+                <div class="item">
+                    <center>
+                        <img style="border-radius:40px;" alt="@Model.Title" src="@Model.Interior" />
+                        <center>
+                </div>
+                <div class="item">
+                    <center>
+                        <img style="border-radius:40px;" alt="@Model.Title" src="@Model.Engine" />
+                        <center>
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <hr class="-line_mine_orange" />
+        </center>
+        <div id="album-details" style="color:white;">
+            <center>
+                <p>
+                    <em>Típus: </em>@Model.Genre.Name
+                </p>
+                <p>
+                    <em>Gyártó: </em> @Model.Artist.Name
+                </p>
+                <p>
+                    <em>Ár: </em> @String.Format("{0:F}", Model.Price)<em> $</em>
+                </p>
+                <p>
+                    @Html.ActionLink("Kosárba", "AddToCart", "ShoppingCart", new { id = Model.AlbumId }, new { @class = "sajatgomb2" })
+                </p>
+            </center>
+        </div>
+        <br />
+        <hr class="featurette-divider -hr_mine">

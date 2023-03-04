@@ -1,0 +1,94 @@
+﻿<div>
+    <div>
+        @model IEnumerable<MusicStore.Models.Genre>
+        @{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            ViewBag.Title = "Store";
+        }
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/sajat.css" rel="stylesheet" />
+        @Scripts.Render("~/bundles/bootstrap")
+        <div class="container" style="color:white;">
+            <center>
+                <h1 style="color:white; font-weight:bold;">   Válasszon a @Model.Count() típusú autónk közül:</h1>
+            </center>
+            <br />
+            <hr class="featurette-divider -hr_mine">
+            <div class="row">
+                <center>
+                    <div class="col-md-4">
+
+                        <div class="card" style="width: 18rem;">
+                            <a href="/Store/Browse?genre=Hatchback">
+                                <img src="~/Content/Images/Card/Hatchback.png" class="card-img-top" alt="...">
+                            </a>
+
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=Hatchback" class="btn btn-warning" style="width:140px;">Hatchback</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <a href="/Store/Browse?genre=Sedan">
+                                <img src="~/Content/Images/Card/Sedan.png" class="card-img-top" alt="...">
+                            </a>
+
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=Sedan" class="btn btn-warning" style="width:140px;">Sedan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Content/Images/Card/Suv.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=SUV" class="btn btn-warning" style="width:140px;">SUV</a>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <br />
+
+            <br />
+            <div class="row">
+                <center>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Content/Images/Card/Roadster.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=Roadster" class="btn btn-warning" style="width:140px;">Roadster</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Content/Images/Card/Pickup.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=Pickup" class="btn btn-warning" style="width:140px;">Pickup</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="~/Content/Images/Card/Minivan.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <a href="/Store/Browse?genre=Minivan" class="btn btn-warning" style="width:140px;">Minivan</a>
+                            </div>
+                        </div>
+                    </div>
+                    </center>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="featurette-divider -hr_mine">
